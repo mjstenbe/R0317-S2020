@@ -1,2 +1,2 @@
-module GitDemo {
+module IhminenDemo {
 }
