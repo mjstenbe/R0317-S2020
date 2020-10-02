@@ -3,41 +3,61 @@ package ihminendemo;
 public class Ihminen {
 
 	// Luokkamuuttujat
+	static int lkm;
 
-	private int ikä;
+	private int ikÃ¤;
 	private double paino;
 	private String nimi;
 
+	private Omena[] reppu;
+
 	// Konstruktori
 	public Ihminen() {
-		ikä = 10;
+		ikÃ¤ = (int) (Math.random() * 100);
 		paino = 35;
-		nimi = "Ei määritelty";
+		nimi = "Ei mÃ¤Ã¤ritelty";
+		lkm++;
+		reppu = new Omena[10];
+	}
 
+	public Ihminen(String uusiNimi) {
+		this();
+		nimi = uusiNimi;
+	};
+
+	public Ihminen(String uusiNimi, int uusiIkÃ¤, double uusiPaino) {
+		this();
+		nimi = uusiNimi;
+		ikÃ¤ = uusiIkÃ¤;
+		paino = uusiPaino;
 	}
 
 	// Aksessorit
 
-	public void setIkä(int uusiIkä) {
-		if (uusiIkä > 0) {
-			ikä = uusiIkä;
+	public void setIkÃ¤(int uusiIkÃ¤) {
+		if (uusiIkÃ¤ > 0) {
+			ikÃ¤ = uusiIkÃ¤;
 		}
 	}
 
-	public int getIkä() {
-		return ikä;
+	public int getIkÃ¤() {
+		return ikÃ¤;
 	}
 
-	// Syö-metodi
+	// SyÃ¤-metodi
 
-	public void syö() {
+	public void syÃ¤() {
 		paino += 10;
 		System.out.println("Nam nam. Painoni on: " + paino);
 	}
 
+	public void kerÃ¤Ã¤Omena(int i) {
+		this.reppu[i] = new Omena(); 
+	}
+
 	// Kuormitetaan metodia - toString
 	public String toString() {
-		return "Ihminen [ Ikä=" + ikä + " paino= " + paino + " nimi=" + nimi + " ]";
+		return "Ihminen [ IkÃ¤=" + ikÃ¤ + " paino= " + paino + " nimi=" + nimi + " lkm: " + lkm + "]";
 
 	}
 }

@@ -6,46 +6,54 @@ public class IhmisTehdas {
 
 	// Oliokirja, Kai Koskimies
 	// Esimerkkikoodit jaetaan GitHubissa: https://github.com/mjstenbe/R0317-S2020
-	
+
 	public static void main(String[] args) {
 
 		Ihminen eka = new Ihminen();
+
 		Ihminen toka = new Ihminen();
-		
+		Ihminen kolmas = new Ihminen("Mika");
+		Ihminen neljas = new Ihminen("Maija");
+
+		Ihminen custom = new Ihminen("Matti", 29, 76.3);
+		Ihminen custom2 = new Ihminen("Miisa", 53, 96.3);
+
 //		eka.nimi = "Masa";
 //		toka.nimi = "Mauno";
 //		
-//		eka.ikä = 20;
-//		toka.ikä = 50;
+//		eka.ikÃ¤ = 20;
+//		toka.ikÃ¤ = 50;
 //		
 //		eka.paino = 35;
 //		toka.paino = 82;
 //		
-//		System.out.println("Ihminen: "+eka.nimi+" "+ eka.ikä);
-//		System.out.println("Ihminen: "+toka.nimi+" "+ toka.ikä);
-		
-		eka.setIkä(-10);
-		toka.setIkä(56);
-		
+//		System.out.println("Ihminen: "+eka.nimi+" "+ eka.ikÃ¤);
+//		System.out.println("Ihminen: "+toka.nimi+" "+ toka.ikÃ¤);
 
+		eka.setIkÃ¤(-10);
+		toka.setIkÃ¤(56);
 
-		// System.out.println( eka.getIkä() );
-		
-		
-		eka.syö();
-		eka.syö();
-		eka.syö();
-		
-		toka.syö();
-		
-//		System.out.println("Ihminen: "+eka.nimi+" "+ eka.ikä +" "+eka.paino);
-//		System.out.println("Ihminen: "+toka.nimi+" "+ toka.ikä+" "+toka.paino);
-	
-		
-		//ihminendemo.Ihminen@66a29884
+		// System.out.println( eka.getIkÃ¤() );
+
+		eka.syÃ¤();
+		eka.syÃ¤();
+		eka.syÃ¤();
+
+		toka.syÃ¤();
+
+//		System.out.println("Ihminen: "+eka.nimi+" "+ eka.ikÃ¤ +" "+eka.paino);
+//		System.out.println("Ihminen: "+toka.nimi+" "+ toka.ikÃ¤+" "+toka.paino);
+
+		// ihminendemo.Ihminen@66a29884
 		System.out.println(eka);
 		System.out.println(toka);
-		
+		System.out.println(kolmas);
+		System.out.println(neljas);
+		System.out.println(custom);
+		System.out.println(custom2);
+
+		custom.kerÃ¤Ã¤Omena(1);
+		neljas.kerÃ¤Ã¤Omena(0);
 
 	}
 
